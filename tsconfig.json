@@ -5,6 +5,7 @@
     "noResolve": false,
     // "noImplicitAny": false,
     "strict": true,
+    "declaration": true,                 
     "sourceMap": true,
     "preserveConstEnums":true,
     "lib": [
@@ -12,9 +13,7 @@
         "es6"
     ],
     "rootDir": "src",
-    "types": [
-      "babylonjs",
-      "babylonjs-gui",
-    ]                                 /* Type declaration files to be included in compilation. */
-  }
+    "outDir": "./dist",
+  },
+  "include": ["src"]
 }

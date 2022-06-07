@@ -4,7 +4,7 @@
   "description": "Starter project using web-ifc and Babylon.js",
   "main": "index.js",
   "scripts": {
-    "build": "cp node_modules/web-ifc/web-ifc.wasm public/web-ifc.wasm&webpack",
+    "build": "tsc",
     "start": "webpack serve --port 8080"
   },
   "repository": {

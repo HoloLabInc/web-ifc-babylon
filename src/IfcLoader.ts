@@ -111,8 +111,8 @@ export class IfcLoader {
         if (mergedmesh) {
           mergedmesh.name = colorid.toString(16);
 
-          mergedmesh.material?.freeze();
-          mergedmesh.freezeWorldMatrix();
+          // mergedmesh.material?.freeze();
+          // mergedmesh.freezeWorldMatrix();
 
           meshmaterials.set(colorid, mergedmesh);
           mergedmesh.parent = mainObject;
@@ -121,8 +121,8 @@ export class IfcLoader {
         var newMaterial = this.getMeshMaterial(color, scene);
         meshgeometry.material = newMaterial;
 
-        meshgeometry.material.freeze();
-        meshgeometry.freezeWorldMatrix();
+        // meshgeometry.material.freeze();
+        // meshgeometry.freezeWorldMatrix();
 
         meshmaterials.set(colorid, meshgeometry);
         meshgeometry.parent = mainObject;
