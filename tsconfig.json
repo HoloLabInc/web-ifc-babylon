@@ -3,7 +3,8 @@
     "target": "es6",
     "module": "commonjs",
     "noResolve": false,
-    "noImplicitAny": false,
+    // "noImplicitAny": false,
+    "strict": true,
     "sourceMap": true,
     "preserveConstEnums":true,
     "lib": [

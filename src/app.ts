@@ -1,3 +1,5 @@
+export { IfcLoader } from "./IfcLoader";
+/*
 import * as BABYLON from "@babylonjs/core";
 import * as GUI from "@babylonjs/gui";
 import "@babylonjs/loaders/glTF";
@@ -44,7 +46,7 @@ class App {
             // Set light intensity to a lower value (default is 1).
             light.intensity = 0.9;
             downlight.intensity = 0.8;
-            */
+            *
 
             // Return the created scene
             return scene;
@@ -130,3 +132,4 @@ class App {
 }
 var app = new App();
 app.createContent();
+*/
