@@ -15,15 +15,18 @@ export class IfcLoader {
     await this.ifcAPI.Init();
   }
 
+  setWasmPath(path: string, absolute: boolean | undefined = undefined) {
+    this.ifcAPI.SetWasmPath(path, absolute);
+  }
+
   async load(
-    name: string,
-    file: string | Uint8Array,
+    file: Uint8Array,
     scene: BABYLON.Scene,
     mergematerials: any
   ) {
     var mToggle_YZ = [1, 0, 0, 0, 0, -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, -1];
 
-    var modelID = await this.ifcAPI.OpenModel(name, file);
+    var modelID = await this.ifcAPI.OpenModel(file);
     await this.ifcAPI.SetGeometryTransformation(modelID, mToggle_YZ);
     var flatMeshes = this.getFlatMeshes(modelID);
 

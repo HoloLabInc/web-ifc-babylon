@@ -24,6 +24,6 @@
   "dependencies": {
     "@babylonjs/core": "^5.1.0",
     "@babylonjs/inspector": "^5.1.0",
-    "web-ifc": "0.0.17"
+    "web-ifc": "^0.0.35"
   }
 }

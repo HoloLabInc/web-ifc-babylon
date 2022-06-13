@@ -25,10 +25,13 @@ class IfcLoader {
             yield this.ifcAPI.Init();
         });
     }
-    load(name, file, scene, mergematerials) {
+    setWasmPath(path, absolute = undefined) {
+        this.ifcAPI.SetWasmPath(path, absolute);
+    }
+    load(file, scene, mergematerials) {
         return __awaiter(this, void 0, void 0, function* () {
             var mToggle_YZ = [1, 0, 0, 0, 0, -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, -1];
-            var modelID = yield this.ifcAPI.OpenModel(name, file);
+            var modelID = yield this.ifcAPI.OpenModel(file);
             yield this.ifcAPI.SetGeometryTransformation(modelID, mToggle_YZ);
             var flatMeshes = this.getFlatMeshes(modelID);
             scene.blockMaterialDirtyMechanism = true;

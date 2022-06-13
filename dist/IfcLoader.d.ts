@@ -6,7 +6,8 @@ export declare class IfcLoader {
     constructor();
     private ifcAPI;
     initialize(): Promise<void>;
-    load(name: string, file: string | Uint8Array, scene: BABYLON.Scene, mergematerials: any): Promise<BABYLON.Mesh>;
+    setWasmPath(path: string, absolute?: boolean | undefined): void;
+    load(file: Uint8Array, scene: BABYLON.Scene, mergematerials: any): Promise<BABYLON.Mesh>;
     getFlatMeshes(modelID: number): import("web-ifc/web-ifc-api").Vector<import("web-ifc/web-ifc-api").FlatMesh>;
     getPlacedGeometry(modelID: number, placedGeometry: PlacedGeometry, scene: BABYLON.Scene, mainObject: BABYLON.Nullable<BABYLON.Node>, meshmaterials: Map<number, BABYLON.Mesh>, mergematerials: any): Promise<BABYLON.Mesh | null>;
     getBufferGeometry(modelID: number, placedGeometry: PlacedGeometry, scene: BABYLON.Nullable<BABYLON.Scene>): BABYLON.Mesh | null;
