@@ -1,0 +1,1 @@
+export { IfcLoader } from "./IfcLoader";

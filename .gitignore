@@ -184,7 +184,7 @@ dist/preview release/package/
 localDevWebGPU/src/*
 
 # viewer dist files
-dist/
+# dist/
 /Viewer/dist/viewer.js
 /Viewer/dist/viewer.min.js
 dist/preview release/viewer/babylon.d.ts
